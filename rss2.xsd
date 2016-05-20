@@ -1,0 +1,36 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+<xs:element name="rss">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="channel">
+<xs:complexType>
+<xs:sequence>
+<xs:element type="xs:string" name="title"/>
+<xs:element type="xs:anyURI" name="link"/>
+<xs:element type="xs:string" name="description"/>
+<xs:element type="xs:string" name="language"/>
+<xs:element type="xs:string" name="pubDate"/>
+<xs:element type="xs:string" name="lastBuildDate"/>
+<xs:element type="xs:anyURI" name="docs"/>
+<xs:element type="xs:string" name="generator"/>
+<xs:element type="xs:string" name="managingEditor"/>
+<xs:element type="xs:string" name="webMaster"/>
+<xs:element name="item" maxOccurs="unbounded" minOccurs="0">
+<xs:complexType>
+<xs:sequence>
+<xs:element type="xs:string" name="title" minOccurs="0"/>
+<xs:element type="xs:anyURI" name="link" minOccurs="0"/>
+<xs:element type="xs:string" name="description"/>
+<xs:element type="xs:string" name="pubDate"/>
+<xs:element type="xs:anyURI" name="guid"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+<xs:attribute type="xs:float" name="version"/>
+</xs:complexType>
+</xs:element>
+</xs:schema>

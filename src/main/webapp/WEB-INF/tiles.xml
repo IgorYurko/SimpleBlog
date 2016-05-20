@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+    <definition name="base-layout" template="/WEB-INF/views/layout/base-layout.jsp">
+        <put-attribute name="base-styles" value="/WEB-INF/views/inc/base-style.jsp"/>
+        <put-attribute name="personal-style" value=""/>
+        <put-attribute name="title" value="You don't used a title"/>
+        <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp"/>
+        <put-attribute name="content" value=""/>
+        <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp"/>
+        <put-attribute name="base-script" value="/WEB-INF/views/inc/base-script.jsp"/>
+        <put-attribute name="personal-script" value=""/>
+    </definition>
+
+    <definition name="index" extends="base-layout">
+        <put-attribute name="title" value="Home page"/>
+        <put-attribute name="content" value="/WEB-INF/views/index.jsp"/>
+        <put-attribute name="current" value="index" cascade="true"/>
+    </definition>
+
+    <definition name="users" extends="base-layout">
+        <put-attribute name="title" value="Users page"/>
+        <put-attribute name="content" value="/WEB-INF/views/users.jsp"/>
+        <put-attribute name="current" value="users" cascade="true"/>
+    </definition>
+
+    <definition name="user-detail" extends="base-layout">
+        <put-attribute name="title" value="User detail"/>
+        <put-attribute name="content" value="/WEB-INF/views/user-detail.jsp"/>
+        <put-attribute name="current" value="users" cascade="true"/>
+    </definition>
+
+    <definition name="account" extends="base-layout">
+        <put-attribute name="title" value="My account"/>
+        <put-attribute name="content" value="/WEB-INF/views/user-detail.jsp"/>
+        <put-attribute name="current" value="account" cascade="true"/>
+    </definition>
+
+    <definition name="registration" extends="base-layout">
+        <put-attribute name="title" value="User registration"/>
+        <put-attribute name="content" value="/WEB-INF/views/registration.jsp"/>
+        <put-attribute name="current" value="registration" cascade="true"/>
+    </definition>
+
+    <definition name="login" extends="base-layout">
+        <put-attribute name="personal-style" value="/WEB-INF/views/inc/form-personal-style.jsp"/>
+        <put-attribute name="title" value="Login"/>
+        <put-attribute name="content" value="/WEB-INF/views/login.jsp"/>
+        <put-attribute name="current" value="login" cascade="true"/>
+    </definition>
+
+</tiles-definitions>
